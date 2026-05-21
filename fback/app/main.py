@@ -33,12 +33,17 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://free-frontend-alpha.vercel.app"],
+    allow_origins=[
+        "https://free-frontend-alpha.vercel.app",
+        "https://stackmint-freelance.vercel.app",
+        "http://127.0.0.1:5500",
+        "http://localhost:5500",
+        "http://localhost:3000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Routers
 app.include_router(contact.router, prefix="/api/v1", tags=["Contact"])
 app.include_router(admin.router, prefix="/api/v1/admin", tags=["Admin"])
