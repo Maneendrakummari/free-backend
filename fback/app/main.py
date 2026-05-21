@@ -36,6 +36,7 @@ app.add_middleware(
     allow_origins=[
         "https://free-frontend-alpha.vercel.app",
         "https://stackmint-freelance.vercel.app",
+        "https://daxoralabs.vercel.app",
         "http://127.0.0.1:5500",
         "http://localhost:5500",
         "http://localhost:3000",
